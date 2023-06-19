@@ -8,11 +8,32 @@
 import Foundation
 
 protocol AuthServiceInterface {
-    func signIn(login: String, password: String, completion: @escaping(Result<Data, Error>) -> Void)
+    func signIn(login: String, password: String, completion: @escaping(Result<Void, AuthError>) -> Void)
 }
 
 class AuthService: AuthServiceInterface {
-    func signIn(login: String, password: String, completion: @escaping(Result<Data, Error>) -> Void) {
-        // TODO:
+    func signIn(login: String, password: String, completion: @escaping(Result<Void, AuthError>) -> Void) {
+        // Hardcoded credentials
+        if login == "user" && password == "123qwe" {
+            completion(.success(()))
+        } else {
+            completion(.failure(.invalidCredentials))
+        }
+    }
+}
+
+enum AuthError: Error {
+    case invalidCredentials
+    case unknown
+}
+
+extension AuthError: LocalizedError {
+    var errorDescription: String? {
+        switch self {
+        case .invalidCredentials:
+            return NSLocalizedString("Invalid credentials", comment: "")
+        case .unknown:
+            return NSLocalizedString("Unknown error", comment: "")
+        }
     }
 }
