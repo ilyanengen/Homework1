@@ -8,13 +8,13 @@
 import Foundation
 
 protocol AuthServiceInterface {
-    func signIn(login: String, password: String, completion: @escaping(Result<Void, AuthError>) -> Void)
+    func signIn(username: String, password: String, completion: @escaping(Result<Void, AuthError>) -> Void)
 }
 
 class AuthService: AuthServiceInterface {
-    func signIn(login: String, password: String, completion: @escaping(Result<Void, AuthError>) -> Void) {
+    func signIn(username: String, password: String, completion: @escaping(Result<Void, AuthError>) -> Void) {
         // Hardcoded credentials
-        if login == "user" && password == "123qwe" {
+        if username == "user" && password == "123qwe" {
             completion(.success(()))
         } else {
             completion(.failure(.invalidCredentials))

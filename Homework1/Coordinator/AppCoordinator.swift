@@ -13,6 +13,10 @@ protocol AppCoordinatorInterface {
     func showLoginScreen()
 }
 
+protocol AppCoordinatorDelegate: AnyObject {
+    func didSignInSuccessfully()
+}
+
 class AppCoordinator: AppCoordinatorInterface {
     private let navigationController: UINavigationController
     
@@ -32,8 +36,16 @@ class AppCoordinator: AppCoordinatorInterface {
     func showLoginScreen() {
         let authService = AuthService()
         let loginViewModel = LoginViewModel(authService: authService)
-        var loginVC = LoginViewController()
+        let loginVC = LoginViewController()
         loginVC.viewModel = loginViewModel
+        loginViewModel.view = loginVC
+        loginVC.delegate = self
         self.navigationController.viewControllers = [loginVC]
+    }
+}
+
+extension AppCoordinator: AppCoordinatorDelegate {
+    func didSignInSuccessfully() {
+        // TODO: go from Login Screen to Main screen -> call showMainScreen()
     }
 }
