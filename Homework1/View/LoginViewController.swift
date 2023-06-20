@@ -51,6 +51,7 @@ class LoginViewController: UIViewController, LoginViewControllerInterface {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        addKeyboardHideTapRecognizer()
     }
     
     func showErrorAlert(error: Error) {
@@ -64,21 +65,23 @@ class LoginViewController: UIViewController, LoginViewControllerInterface {
     }
     
     private func setupViews() {
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .systemYellow
         
         view.addSubview(usernameTextField)
         view.addSubview(passwordTextField)
         view.addSubview(loginButton)
         
         NSLayoutConstraint.activate([
-            usernameTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100),
-            usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            usernameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            usernameTextField.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor, constant: -100),
+            usernameTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            usernameTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            
             passwordTextField.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor, constant: 20),
-            passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            passwordTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            passwordTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            
             loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
-            loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            loginButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
         ])
         
         usernameTextField.delegate = self
@@ -86,8 +89,18 @@ class LoginViewController: UIViewController, LoginViewControllerInterface {
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
+    private func addKeyboardHideTapRecognizer() {
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapRecognizer.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapRecognizer)
+    }
+    
     @objc private func loginButtonTapped() {
         viewModel?.signIn()
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
 
