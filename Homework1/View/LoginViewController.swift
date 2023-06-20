@@ -22,6 +22,7 @@ class LoginViewController: UIViewController, LoginViewControllerInterface {
         textField.placeholder = "Username"
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.clearButtonMode = .whileEditing
         return textField
     }()
     
@@ -29,6 +30,7 @@ class LoginViewController: UIViewController, LoginViewControllerInterface {
         let textField = UITextField()
         textField.placeholder = "Password"
         textField.borderStyle = .roundedRect
+        textField.clearButtonMode = .whileEditing
         textField.isSecureTextEntry = true
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
