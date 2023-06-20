@@ -19,7 +19,7 @@ class LoginViewModel: LoginViewModelInterface {
     var password: String
     var authService: AuthServiceInterface
     
-    weak var view: LoginViewControllerInterface?
+    weak var view: LoginViewInterface?
     
     init(username: String = "", password: String = "", authService: AuthServiceInterface) {
         self.username = username

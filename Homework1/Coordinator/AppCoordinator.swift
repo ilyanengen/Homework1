@@ -9,7 +9,7 @@ import UIKit
 
 protocol AppCoordinatorInterface {
     func start()
-    func showMainScreen()
+    func showListScreen()
     func showLoginScreen()
 }
 
@@ -29,8 +29,14 @@ class AppCoordinator: AppCoordinatorInterface {
         showLoginScreen()
     }
     
-    func showMainScreen() {
-        // TODO
+    func showListScreen() {
+        let itemService = ItemService()
+        let itemListViewModel = ItemListViewModel(itemService: itemService)
+        let itemListVC = ItemListViewController()
+        itemListVC.viewModel = itemListViewModel
+        itemListViewModel.view = itemListVC
+        itemListVC.delegate = self
+        self.navigationController.viewControllers = [itemListVC]
     }
     
     func showLoginScreen() {
@@ -46,6 +52,6 @@ class AppCoordinator: AppCoordinatorInterface {
 
 extension AppCoordinator: AppCoordinatorDelegate {
     func didSignInSuccessfully() {
-        // TODO: go from Login Screen to Main screen -> call showMainScreen()
+        showListScreen()
     }
 }

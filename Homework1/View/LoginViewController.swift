@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol LoginViewControllerInterface: AnyObject {
+protocol LoginViewInterface: AnyObject {
     var viewModel: LoginViewModelInterface? { get set }
     func showErrorAlert(error: Error)
     func didSignInSuccessfully()
 }
 
-class LoginViewController: UIViewController, LoginViewControllerInterface {
+class LoginViewController: UIViewController, LoginViewInterface {
     var viewModel: LoginViewModelInterface?
     weak var delegate: AppCoordinatorDelegate?
     
@@ -21,6 +21,7 @@ class LoginViewController: UIViewController, LoginViewControllerInterface {
         let textField = UITextField()
         textField.placeholder = "Username"
         textField.borderStyle = .roundedRect
+        textField.autocapitalizationType = .none
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.clearButtonMode = .whileEditing
         return textField
@@ -30,6 +31,7 @@ class LoginViewController: UIViewController, LoginViewControllerInterface {
         let textField = UITextField()
         textField.placeholder = "Password"
         textField.borderStyle = .roundedRect
+        textField.autocapitalizationType = .none
         textField.clearButtonMode = .whileEditing
         textField.isSecureTextEntry = true
         textField.translatesAutoresizingMaskIntoConstraints = false

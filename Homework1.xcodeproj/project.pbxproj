@@ -16,9 +16,11 @@
 		D3404B632A3A159E00D2971C /* Homework1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3404B622A3A159E00D2971C /* Homework1UITests.swift */; };
 		D3404B652A3A159E00D2971C /* Homework1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3404B642A3A159E00D2971C /* Homework1UITestsLaunchTests.swift */; };
 		D3404B772A3A1CAC00D2971C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3404B762A3A1CAC00D2971C /* AppCoordinator.swift */; };
-		D3AB28282A3A253A0085CF54 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB28272A3A253A0085CF54 /* MainViewController.swift */; };
+		D3AB28282A3A253A0085CF54 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB28272A3A253A0085CF54 /* ItemListViewController.swift */; };
 		D3AB282A2A3A25930085CF54 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB28292A3A25930085CF54 /* LoginViewModel.swift */; };
 		D3AB282D2A3A26320085CF54 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB282C2A3A26320085CF54 /* AuthService.swift */; };
+		D3BF0B312A41FA2200AFF5D0 /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BF0B302A41FA2200AFF5D0 /* ItemListViewModel.swift */; };
+		D3BF0B332A41FA5F00AFF5D0 /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BF0B322A41FA5F00AFF5D0 /* ItemService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +54,11 @@
 		D3404B622A3A159E00D2971C /* Homework1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework1UITests.swift; sourceTree = "<group>"; };
 		D3404B642A3A159E00D2971C /* Homework1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D3404B762A3A1CAC00D2971C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		D3AB28272A3A253A0085CF54 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D3AB28272A3A253A0085CF54 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		D3AB28292A3A25930085CF54 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D3AB282C2A3A26320085CF54 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		D3BF0B302A41FA2200AFF5D0 /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
+		D3BF0B322A41FA5F00AFF5D0 /* ItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				D3AB28292A3A25930085CF54 /* LoginViewModel.swift */,
+				D3BF0B302A41FA2200AFF5D0 /* ItemListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -163,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				D3404B452A3A159C00D2971C /* LoginViewController.swift */,
-				D3AB28272A3A253A0085CF54 /* MainViewController.swift */,
+				D3AB28272A3A253A0085CF54 /* ItemListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				D3AB282C2A3A26320085CF54 /* AuthService.swift */,
+				D3BF0B322A41FA5F00AFF5D0 /* ItemService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -315,11 +321,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3404B772A3A1CAC00D2971C /* AppCoordinator.swift in Sources */,
+				D3BF0B312A41FA2200AFF5D0 /* ItemListViewModel.swift in Sources */,
 				D3404B462A3A159C00D2971C /* LoginViewController.swift in Sources */,
+				D3BF0B332A41FA5F00AFF5D0 /* ItemService.swift in Sources */,
 				D3AB282A2A3A25930085CF54 /* LoginViewModel.swift in Sources */,
 				D3404B422A3A159C00D2971C /* AppDelegate.swift in Sources */,
 				D3404B442A3A159C00D2971C /* SceneDelegate.swift in Sources */,
-				D3AB28282A3A253A0085CF54 /* MainViewController.swift in Sources */,
+				D3AB28282A3A253A0085CF54 /* ItemListViewController.swift in Sources */,
 				D3AB282D2A3A26320085CF54 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
