@@ -21,8 +21,15 @@ class ItemListViewModel: ItemListViewModelInterface {
     }
     
     func fetchStrings() {
-        // TODO: load -> update view with fetched strings
-        let fetchedStrings = ["sadasdas","ssssaaaaa", "kkkhgfds", "ghgjhs"]
-        view?.updateList(items: fetchedStrings)
+        itemService.fetchStrings { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let strings):
+                    self?.view?.updateList(items: strings)
+                case .failure(let error):
+                    self?.view?.showErrorAlert(error: error)
+                }
+            }
+        }
     }
 }
