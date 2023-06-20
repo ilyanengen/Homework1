@@ -14,7 +14,12 @@ protocol LoginViewInterface: AnyObject {
 }
 
 class LoginViewController: UIViewController, LoginViewInterface {
-    var viewModel: LoginViewModelInterface?
+    var viewModel: LoginViewModelInterface? {
+        didSet {
+            usernameTextField.text = viewModel?.username
+            passwordTextField.text = viewModel?.password
+        }
+    }
     weak var delegate: AppCoordinatorDelegate?
     
     private let usernameTextField: UITextField = {

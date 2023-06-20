@@ -22,5 +22,7 @@ class ItemListViewModel: ItemListViewModelInterface {
     
     func fetchStrings() {
         // TODO: load -> update view with fetched strings
+        let fetchedStrings = ["sadasdas","ssssaaaaa", "kkkhgfds", "ghgjhs"]
+        view?.updateList(items: fetchedStrings)
     }
 }

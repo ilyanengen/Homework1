@@ -41,7 +41,7 @@ class AppCoordinator: AppCoordinatorInterface {
     
     func showLoginScreen() {
         let authService = AuthService()
-        let loginViewModel = LoginViewModel(authService: authService)
+        let loginViewModel = LoginViewModel(username: "user", password: "123qwe", authService: authService)
         let loginVC = LoginViewController()
         loginVC.viewModel = loginViewModel
         loginViewModel.view = loginVC
