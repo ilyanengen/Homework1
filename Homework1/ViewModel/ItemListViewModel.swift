@@ -14,7 +14,7 @@ protocol ItemListViewModelInterface {
 class ItemListViewModel: ItemListViewModelInterface {
     weak var view: ItemListViewInterface?
     
-    var itemService: ItemServiceInterface
+    private let itemService: ItemServiceInterface
     
     init(itemService: ItemServiceInterface) {
         self.itemService = itemService

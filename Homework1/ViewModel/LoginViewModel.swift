@@ -7,8 +7,7 @@
 
 import Foundation
 
-protocol LoginViewModelInterface: LoginViewModel {
-    var authService: AuthServiceInterface { get set }
+protocol LoginViewModelInterface {
     var username: String { get set }
     var password: String { get set }
     func signIn()
@@ -17,9 +16,9 @@ protocol LoginViewModelInterface: LoginViewModel {
 class LoginViewModel: LoginViewModelInterface {
     var username: String
     var password: String
-    var authService: AuthServiceInterface
-    
     weak var view: LoginViewInterface?
+    
+    private let authService: AuthServiceInterface
     
     init(username: String = "", password: String = "", authService: AuthServiceInterface) {
         self.username = username
