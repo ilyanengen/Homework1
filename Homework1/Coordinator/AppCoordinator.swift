@@ -8,6 +8,7 @@
 import UIKit
 
 protocol AppCoordinatorInterface {
+    var isLoggedIn: Bool { get set }
     func start()
     func showListScreen()
     func showLoginScreen()
@@ -18,6 +19,8 @@ protocol AppCoordinatorDelegate: AnyObject {
 }
 
 class AppCoordinator: AppCoordinatorInterface {
+    var isLoggedIn: Bool = false
+    
     private let navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -25,8 +28,11 @@ class AppCoordinator: AppCoordinatorInterface {
     }
     
     func start() {
-        // TODO: check whether user is already signed in -> call showMainScreen / showLoginScreen
-        showLoginScreen()
+        if isLoggedIn {
+            showListScreen()
+        } else {
+            showLoginScreen()
+        }
     }
     
     func showListScreen() {
