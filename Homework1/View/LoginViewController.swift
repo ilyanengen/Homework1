@@ -64,13 +64,21 @@ class LoginViewController: UIViewController, LoginViewInterface {
     }
     
     func showErrorAlert(error: Error) {
-        let errorAlert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        let errorAlert = UIAlertController(
+            title: "Error",
+            message: error.localizedDescription,
+            preferredStyle: .alert)
         errorAlert.addAction(.init(title: "OK", style: .default))
-        present(errorAlert, animated: true)
+        
+        DispatchQueue.main.async {
+            self.present(errorAlert, animated: true)
+        }
     }
     
     func didSignInSuccessfully() {
-        delegate?.didSignInSuccessfully()
+        DispatchQueue.main.async {
+            self.delegate?.didSignInSuccessfully()
+        }
     }
     
     private func setupViews() {

@@ -27,13 +27,21 @@ class ItemListViewController: UIViewController, ItemListViewInterface {
     }
     
     func updateList(items: [String]) {
-        refreshTableView(with: items)
+        DispatchQueue.main.async {
+            self.refreshTableView(with: items)
+        }
     }
     
     func showErrorAlert(error: Error) {
-        let errorAlert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        let errorAlert = UIAlertController(
+            title: "Error",
+            message: error.localizedDescription,
+            preferredStyle: .alert)
         errorAlert.addAction(.init(title: "OK", style: .default))
-        present(errorAlert, animated: true)
+        
+        DispatchQueue.main.async {
+            self.present(errorAlert, animated: true)
+        }
     }
     
     private func setupTableView() {

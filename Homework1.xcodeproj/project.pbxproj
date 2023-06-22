@@ -22,7 +22,7 @@
 		D3BF0B332A41FA5F00AFF5D0 /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BF0B322A41FA5F00AFF5D0 /* ItemService.swift */; };
 		D3E7E1022A44C2DC0022DA99 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E1012A44C2DC0022DA99 /* AppCoordinatorTests.swift */; };
 		D3E7E1042A44C3070022DA99 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E1032A44C3070022DA99 /* LoginViewModelTests.swift */; };
-		D3E7E1062A44C3170022DA99 /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E1052A44C3170022DA99 /* ItemListViewModel.swift */; };
+		D3E7E1062A44C3170022DA99 /* ItemListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E1052A44C3170022DA99 /* ItemListViewModelTests.swift */; };
 		D3E7E1082A44C6E30022DA99 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E1072A44C6E30022DA99 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +63,7 @@
 		D3BF0B322A41FA5F00AFF5D0 /* ItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
 		D3E7E1012A44C2DC0022DA99 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
 		D3E7E1032A44C3070022DA99 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
-		D3E7E1052A44C3170022DA99 /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
+		D3E7E1052A44C3170022DA99 /* ItemListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModelTests.swift; sourceTree = "<group>"; };
 		D3E7E1072A44C6E30022DA99 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,7 +132,7 @@
 			children = (
 				D3E7E1012A44C2DC0022DA99 /* AppCoordinatorTests.swift */,
 				D3E7E1032A44C3070022DA99 /* LoginViewModelTests.swift */,
-				D3E7E1052A44C3170022DA99 /* ItemListViewModel.swift */,
+				D3E7E1052A44C3170022DA99 /* ItemListViewModelTests.swift */,
 			);
 			path = Homework1Tests;
 			sourceTree = "<group>";
@@ -347,7 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3E7E1042A44C3070022DA99 /* LoginViewModelTests.swift in Sources */,
-				D3E7E1062A44C3170022DA99 /* ItemListViewModel.swift in Sources */,
+				D3E7E1062A44C3170022DA99 /* ItemListViewModelTests.swift in Sources */,
 				D3E7E1022A44C2DC0022DA99 /* AppCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

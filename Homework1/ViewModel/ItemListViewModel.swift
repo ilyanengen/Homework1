@@ -22,13 +22,11 @@ class ItemListViewModel: ItemListViewModelInterface {
     
     func fetchStrings() {
         itemService.fetchStrings { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let strings):
-                    self?.view?.updateList(items: strings)
-                case .failure(let error):
-                    self?.view?.showErrorAlert(error: error)
-                }
+            switch result {
+            case .success(let strings):
+                self?.view?.updateList(items: strings)
+            case .failure(let error):
+                self?.view?.showErrorAlert(error: error)
             }
         }
     }

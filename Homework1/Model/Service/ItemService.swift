@@ -12,6 +12,10 @@ protocol ItemServiceInterface {
     func fetchStrings(completion: @escaping(Result<[String], Error>) -> Void)
 }
 
+enum API {
+    static let fetchStringsUrl = "https://www.random.org/strings/?num=10&len=8&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new"
+}
+
 class ItemService: ItemServiceInterface {
     var fetchStringsUrl: String
     private let networkManager: NetworkManagerInterface
@@ -22,7 +26,10 @@ class ItemService: ItemServiceInterface {
     }
     
     func fetchStrings(completion: @escaping(Result<[String], Error>) -> Void) {
-        guard let url = URL(string: fetchStringsUrl) else {
+        guard
+            let url = URL(string: fetchStringsUrl),
+            url.absoluteString == API.fetchStringsUrl
+        else {
             completion(.failure(ItemError.invalidURL))
             return
         }
