@@ -31,7 +31,8 @@ class AppCoordinator: AppCoordinatorInterface {
     
     func showListScreen() {
         let networkManager = NetworkManager()
-        let itemService = ItemService(networkManager: networkManager)
+        let urlString = "https://www.random.org/strings/?num=10&len=8&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new"
+        let itemService = ItemService(networkManager: networkManager, fetchStringsUrl: urlString)
         let itemListViewModel = ItemListViewModel(itemService: itemService)
         let itemListVC = ItemListViewController()
         itemListVC.viewModel = itemListViewModel

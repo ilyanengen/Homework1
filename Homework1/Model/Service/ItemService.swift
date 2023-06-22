@@ -8,18 +8,21 @@
 import Foundation
 
 protocol ItemServiceInterface {
+    var fetchStringsUrl: String { get set }
     func fetchStrings(completion: @escaping(Result<[String], Error>) -> Void)
 }
 
 class ItemService: ItemServiceInterface {
+    var fetchStringsUrl: String
     private let networkManager: NetworkManagerInterface
     
-    init(networkManager: NetworkManagerInterface) {
+    init(networkManager: NetworkManagerInterface, fetchStringsUrl: String) {
         self.networkManager = networkManager
+        self.fetchStringsUrl = fetchStringsUrl
     }
     
     func fetchStrings(completion: @escaping(Result<[String], Error>) -> Void) {
-        guard let url = URL(string: "https://www.random.org/strings/?num=10&len=8&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new") else {
+        guard let url = URL(string: fetchStringsUrl) else {
             completion(.failure(ItemError.invalidURL))
             return
         }

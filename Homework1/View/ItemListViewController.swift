@@ -39,6 +39,7 @@ class ItemListViewController: UIViewController, ItemListViewInterface {
     private func setupTableView() {
         tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.delegate = self
         view.addSubview(tableView)
         
         dataSource = UITableViewDiffableDataSource<Int, String>(tableView: tableView) { tableView, indexPath, item in
@@ -55,5 +56,11 @@ class ItemListViewController: UIViewController, ItemListViewInterface {
         snapshot.appendSections([0])
         snapshot.appendItems(items, toSection: 0)
         dataSource.apply(snapshot, animatingDifferences: true)
+    }
+}
+
+extension ItemListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
