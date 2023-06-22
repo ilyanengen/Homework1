@@ -1,14 +1,14 @@
 //
-//  Homework1Tests.swift
+//  AppCoordinatorTests.swift
 //  Homework1Tests
 //
-//  Created by Ilia Biltuev on 14.06.2023.
+//  Created by Ilia Biltuev on 22.06.2023.
 //
 
 import XCTest
 @testable import Homework1
 
-final class Homework1Tests: XCTestCase {
+final class AppCoordinatorTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

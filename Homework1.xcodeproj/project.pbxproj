@@ -12,7 +12,6 @@
 		D3404B462A3A159C00D2971C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3404B452A3A159C00D2971C /* LoginViewController.swift */; };
 		D3404B4B2A3A159E00D2971C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3404B4A2A3A159E00D2971C /* Assets.xcassets */; };
 		D3404B4E2A3A159E00D2971C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3404B4C2A3A159E00D2971C /* LaunchScreen.storyboard */; };
-		D3404B592A3A159E00D2971C /* Homework1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3404B582A3A159E00D2971C /* Homework1Tests.swift */; };
 		D3404B632A3A159E00D2971C /* Homework1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3404B622A3A159E00D2971C /* Homework1UITests.swift */; };
 		D3404B652A3A159E00D2971C /* Homework1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3404B642A3A159E00D2971C /* Homework1UITestsLaunchTests.swift */; };
 		D3404B772A3A1CAC00D2971C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3404B762A3A1CAC00D2971C /* AppCoordinator.swift */; };
@@ -21,6 +20,10 @@
 		D3AB282D2A3A26320085CF54 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB282C2A3A26320085CF54 /* AuthService.swift */; };
 		D3BF0B312A41FA2200AFF5D0 /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BF0B302A41FA2200AFF5D0 /* ItemListViewModel.swift */; };
 		D3BF0B332A41FA5F00AFF5D0 /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BF0B322A41FA5F00AFF5D0 /* ItemService.swift */; };
+		D3E7E1022A44C2DC0022DA99 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E1012A44C2DC0022DA99 /* AppCoordinatorTests.swift */; };
+		D3E7E1042A44C3070022DA99 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E1032A44C3070022DA99 /* LoginViewModelTests.swift */; };
+		D3E7E1062A44C3170022DA99 /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E1052A44C3170022DA99 /* ItemListViewModel.swift */; };
+		D3E7E1082A44C6E30022DA99 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E1072A44C6E30022DA99 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +52,6 @@
 		D3404B4D2A3A159E00D2971C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3404B4F2A3A159E00D2971C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3404B542A3A159E00D2971C /* Homework1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Homework1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3404B582A3A159E00D2971C /* Homework1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework1Tests.swift; sourceTree = "<group>"; };
 		D3404B5E2A3A159E00D2971C /* Homework1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Homework1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3404B622A3A159E00D2971C /* Homework1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework1UITests.swift; sourceTree = "<group>"; };
 		D3404B642A3A159E00D2971C /* Homework1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework1UITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -59,6 +61,10 @@
 		D3AB282C2A3A26320085CF54 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D3BF0B302A41FA2200AFF5D0 /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
 		D3BF0B322A41FA5F00AFF5D0 /* ItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
+		D3E7E1012A44C2DC0022DA99 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		D3E7E1032A44C3070022DA99 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		D3E7E1052A44C3170022DA99 /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
+		D3E7E1072A44C6E30022DA99 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +130,9 @@
 		D3404B572A3A159E00D2971C /* Homework1Tests */ = {
 			isa = PBXGroup;
 			children = (
-				D3404B582A3A159E00D2971C /* Homework1Tests.swift */,
+				D3E7E1012A44C2DC0022DA99 /* AppCoordinatorTests.swift */,
+				D3E7E1032A44C3070022DA99 /* LoginViewModelTests.swift */,
+				D3E7E1052A44C3170022DA99 /* ItemListViewModel.swift */,
 			);
 			path = Homework1Tests;
 			sourceTree = "<group>";
@@ -186,6 +194,7 @@
 			children = (
 				D3AB282C2A3A26320085CF54 /* AuthService.swift */,
 				D3BF0B322A41FA5F00AFF5D0 /* ItemService.swift */,
+				D3E7E1072A44C6E30022DA99 /* NetworkManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -322,6 +331,7 @@
 			files = (
 				D3404B772A3A1CAC00D2971C /* AppCoordinator.swift in Sources */,
 				D3BF0B312A41FA2200AFF5D0 /* ItemListViewModel.swift in Sources */,
+				D3E7E1082A44C6E30022DA99 /* NetworkManager.swift in Sources */,
 				D3404B462A3A159C00D2971C /* LoginViewController.swift in Sources */,
 				D3BF0B332A41FA5F00AFF5D0 /* ItemService.swift in Sources */,
 				D3AB282A2A3A25930085CF54 /* LoginViewModel.swift in Sources */,
@@ -336,7 +346,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3404B592A3A159E00D2971C /* Homework1Tests.swift in Sources */,
+				D3E7E1042A44C3070022DA99 /* LoginViewModelTests.swift in Sources */,
+				D3E7E1062A44C3170022DA99 /* ItemListViewModel.swift in Sources */,
+				D3E7E1022A44C2DC0022DA99 /* AppCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

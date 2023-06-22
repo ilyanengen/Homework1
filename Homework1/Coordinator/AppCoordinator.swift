@@ -30,7 +30,8 @@ class AppCoordinator: AppCoordinatorInterface {
     }
     
     func showListScreen() {
-        let itemService = ItemService()
+        let networkManager = NetworkManager()
+        let itemService = ItemService(networkManager: networkManager)
         let itemListViewModel = ItemListViewModel(itemService: itemService)
         let itemListVC = ItemListViewController()
         itemListVC.viewModel = itemListViewModel
