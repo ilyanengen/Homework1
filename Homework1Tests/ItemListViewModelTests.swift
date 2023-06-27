@@ -16,6 +16,8 @@ final class ItemListViewModelTests: XCTestCase {
         view.viewModel = sut
         sut.view = view
         
+        // This is error! It works only because of lucky timing! ->
+        // -> Need to rewrite fetchStrings() to have completion handler and use expectation
         sut.fetchStrings()
         
         XCTAssertEqual(["hi", "all"], view.receivedStrings)
@@ -29,6 +31,9 @@ final class ItemListViewModelTests: XCTestCase {
         sut.view = view
         
         mockItemService.isNeedReturnError = true
+        
+        // This is error! It works only because of lucky timing! (You can check it if to wait for few seconds inside fetchStrings) ->
+        // -> Need to rewrite fetchStrings() to have completion handler and use expectation
         sut.fetchStrings()
         
         XCTAssertNotNil(view.receivedError)
@@ -42,6 +47,8 @@ final class ItemListViewModelTests: XCTestCase {
         view.viewModel = sut
         sut.view = view
         
+        // This is error! It works only because of lucky timing! ->
+        // -> Need to rewrite fetchStrings() to have completion handler and use expectation
         sut.fetchStrings()
         
         XCTAssertNotNil(view.receivedError)
